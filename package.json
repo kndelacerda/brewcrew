@@ -1,0 +1,28 @@
+{
+  "name": "brewcrew",
+  "version": "1.0.0",
+  "description": "A web-app dedicated to recommending satisfactory bars for all members of a party. ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kndelacerda/brewcrew.git"
+  },
+  "keywords": [
+    "bar",
+    "bars",
+    "React",
+    "React.js",
+    "brewcrew",
+    "recommendations"
+  ],
+  "author": "Kristen De La Cerda, Amar Katechia, Joe Cabralez, Greg Boyce",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kndelacerda/brewcrew/issues"
+  },
+  "homepage": "https://github.com/kndelacerda/brewcrew#readme"
+}
