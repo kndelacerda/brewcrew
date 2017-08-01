@@ -1,0 +1,1 @@
+This is a web-applicated dedicated to recommending satisfactory bars for all members of a party. 
