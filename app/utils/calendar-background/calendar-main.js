@@ -1,7 +1,7 @@
 'use strict';
 
 var _ = require('lodash');
-var rest = require('./lib/rest-client');
+var rest = require('./calendar-rest-client');
 
 var tap = function(func) {
     return function(value) {
