@@ -13,6 +13,7 @@ var cronofyClient = new Cronofy({
 });
 
 var options = {
+    access_token: 'BZffcdwX8C9JmG4Fi8sJgt9ocne3dKJI',
     // code: 'asdkfj213sdf',
     redirect_uri: 'https://www.xyz.com/',
     // 'tzid' = Time Zone Identifier
