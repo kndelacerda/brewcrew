@@ -31,13 +31,17 @@
         "axios": "^0.15.3",
         "bluebird": "^3.4.7",
         "body-parser": "^1.15.2",
+        "expect": "^1.20.2",
         "express": "^4.14.0",
+        "lodash": "^4.17.4",
+        "mocha": "^3.5.0",
         "mongoose": "^4.7.5",
+        "nodemon": "^1.11.0",
         "react": "^15.4.1",
         "react-dom": "^15.4.1",
         "react-router": "^3.0.0",
-        "lodash": "^4.17.4",
-        "rest": "^2.0.0"
+        "rest": "^2.0.0",
+        "socket.io": "^2.0.3"
     },
     "devDependencies": {
         "babel-cli": "^6.24.1",
@@ -47,6 +51,5 @@
         "babel-preset-react": "^6.16.0",
         "webpack": "^1.14.0",
         "semistandard": "^11.0.0"
-
     }
 }
