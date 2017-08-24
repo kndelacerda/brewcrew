@@ -1,16 +1,18 @@
-var express = require('express');
-var bodyParser = require('body-parser');
+const express = require('express');
+const bodyParser = require('body-parser');
 var path = require('path');
 var session = require('express-session');
-var http = require('http');
+const http = require('http');
 var socketIO = require('socket.io');
+const morgan = require('morgan');
+const mongoose = require('mongoose');
+const app = express();
+
+// DB Setup
+mongoose.connect('mongodb://localhost:auth/auth');
 
 
-var app = express();
-
-
-var PORT = process.env.PORT || 3000;
-// var PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 
 // BodyParser makes it possible for our server to interpret data sent to it.
@@ -22,6 +24,12 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 app.use(express.static('/public'));
 app.use(express.static(process.cwd() + "/public"));
+
+// App Setup
+app.use(morgan('combined'));
+app.use(bodyParser.json({ type: '*/*' }));
+// router(app);
+
 // ================================================================================
 // ROUTER 
 require("./routes/apiRoutes")(app);
@@ -39,14 +47,14 @@ var { isRealString } = require('./app/utils/socketMessenger-background/validatio
 var { Users } = require('./app/utils/socketMessenger-background/users');
 
 //avoids going into and out of server
-var publicPath = path.join(__dirname, '../../public');
+var publicPath = path.join(__dirname, './public');
 
 //
-var port = process.env.PORT || 3000;
+// var port = process.env.PORT || 3000;
 
 //create server using http library (app.listen does the same call behind the scenes)
 //takes function app  
-var server = http.createServer(app);
+const server = http.createServer(app);
 
 //configure server to also use socket io call to socket IO and pass in server 
 //(websocket server to communicate with client and server)
@@ -142,6 +150,6 @@ io.on('connection', (socket) => {
 
 
 //start up server on port 3000 with callback function (console.log)
-server.listen(port, () => {
-    console.log(`Server is up on ${port}`);
+server.listen(PORT, () => {
+    console.log(`Server is up on ${PORT}`);
 });
