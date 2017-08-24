@@ -9,7 +9,7 @@ const mongoose = require('mongoose');
 const app = express();
 
 // DB Setup
-mongoose.connect('mongodb://localhost:auth/auth');
+mongoose.connect(process.env.MONGODB_URI);
 
 
 const PORT = process.env.PORT || 3000;
