@@ -1,15 +1,17 @@
-//configure express by calling methods on app
+var express = require('express');
+var bodyParser = require('body-parser');
+var path = require('path');
+var session = require('express-session');
+var http = require('http');
+var socketIO = require('socket.io');
+
+
 var app = express();
-//built in module
-const path = require('path');
-//built in node module
-const http = require('http');
-//load in express
-const express = require('express');
-//load library socketio
-const socketIO = require('socket.io');
-//
-const port = process.env.PORT || 3000;
+
+
+var PORT = process.env.PORT || 3000;
+// var PORT = 3000;
+
 
 // BodyParser makes it possible for our server to interpret data sent to it.
 // The code below is pretty standard.
@@ -18,26 +20,29 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
+app.use(express.static('/public'));
+app.use(express.static(process.cwd() + "/public"));
 // ================================================================================
 // ROUTER 
-// require("./app/routing/apiRoutes")(app);
-require("./routing/htmlRoutes.js")(app);
+require("./routes/apiRoutes")(app);
+require("./routes/htmlRoutes")(app);
+// app.use(require("./routes/htmlRoutes"));
 // ================================================================================
 
-//
-const { generateMessage, generateLocationMessage } = require('./app/utils/socketMessenger-background/message');
+
+var { generateMessage, generateLocationMessage } = require('./app/utils/socketMessenger-background/message');
 
 //import validation
-const { isRealString } = require('./app/utils/socketMessenger-background/validation');
+var { isRealString } = require('./app/utils/socketMessenger-background/validation');
 
 //Users Array
-const { Users } = require('./app/utils/socketMessenger-background/users');
+var { Users } = require('./app/utils/socketMessenger-background/users');
 
 //avoids going into and out of server
-const publicPath = path.join(__dirname, '../../public');
+var publicPath = path.join(__dirname, '../../public');
 
 //
-const port = process.env.PORT || 3000;
+var port = process.env.PORT || 3000;
 
 //create server using http library (app.listen does the same call behind the scenes)
 //takes function app  
