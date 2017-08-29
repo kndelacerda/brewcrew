@@ -1,10 +1,25 @@
-This is a web-applicated dedicated to recommending satisfactory bars for all members of a party. 
+# ReduxSimpleStarter
 
-Things we need: 
-- MADE IN REACT (Pls help, Amar)
-- Calendar (Cronofy. Links to iCalendar, Google Calendar, etc.) for events
-- SocketIO Messenger
-- Voting functionality. After a bar has been recommended to an individual or group, the user(s) should be able to vote on the place. 
-- Trending functionality. The app should give a tailored response to the users/group based off of their historical voting e.g. if a particular bar was heavily downvoted by a group, it will not be recommended again. 
-- Login with Facebook. 
-- Have user portfolios with a short questionarre on their preferences. 
+Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+
+### Getting Started
+
+There are two methods for getting started with this repo.
+
+#### Familiar with Git?
+Checkout this repo, install dependencies, then start the gulp process with the following:
+
+```
+> git clone https://github.com/StephenGrider/ReduxSimpleStarter.git
+> cd ReduxSimpleStarter
+> npm install
+> npm start
+```
+
+#### Not Familiar with Git?
+Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
+
+```
+> npm install
+> npm start
+```
