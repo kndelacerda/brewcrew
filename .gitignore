@@ -27,3 +27,5 @@ build
 node_modules
 
 .vscode
+
+client_secret.json

@@ -6,16 +6,18 @@
 var Cronofy = require('cronofy');
 
 var cronofyClient = new Cronofy({
-    // client_id: 'armzr1h5NPQST93XTFL9iIULXxfdDlmV',
-    // client_secret: 'aPPwd-ASDFAsdfasdfasdfsadfasdfASDFSADF_asdfasdfasdf',
+    client_id: 'U8BSeuygfRWhVSL3yrZVUQ3vcy0qoU3G',
+    client_secret: 'HxXyfrZ3XeS6x_7ji_XfPlW',
     access_token: 'BZffcdwX8C9JmG4Fi8sJgt9ocne3dKJI',
-    // refresh_token: '5hdSBZHgjA4xcQAelyAYWDfezZv0-9yP'
+    domain: 'http://82ed90ff.ngrok.io',
+    google_maps_embed_api_key: 'AIzaSyCbZy_ehxaas24IudOpNxp0gteULntMYow'
+        // refresh_token: '5hdSBZHgjA4xcQAelyAYWDfezZv0-9yP'
 });
 
 var options = {
     access_token: 'BZffcdwX8C9JmG4Fi8sJgt9ocne3dKJI',
     // code: 'asdkfj213sdf',
-    redirect_uri: 'https://www.xyz.com/',
+    redirect_uri: 'https://brew-crew.herokuapp.com//',
     // 'tzid' = Time Zone Identifier
     tzid: 'Etc/UTC',
     calendar_id: [],

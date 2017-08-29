@@ -10,20 +10,20 @@ module.exports = function(app) {
     // In each of the below cases the user is shown an HTML page of content
     // ---------------------------------------------------------------------------
 
-    // app.get("/", function(req, res) {
-    //     res.sendFile(path.join(__dirname, "../public/pages/index.html"));
-    // });
+    app.get("/", function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/index.html"));
+    });
 
-    // app.get(function(req, res) {
-    //     res.sendFile(path.join(__dirname, "/../public/pages/index.html"));
-    // });
+    app.get(function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/index.html"));
+    });
 
-    // app.get("/forums.html", function(req, res) {
-    //     res.sendFile(path.join(__dirname, "../public/pages/forums.html"));
-    // });
-    // app.get("/aboutus.html", function(req, res) {
-    //     res.sendFile(path.join(__dirname, "../public/pages/aboutus.html"));
-    // });
+    app.get("/groupchat.html", function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/groupchat.html"));
+    });
+    app.get("/chat.html", function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/chat.html"));
+    });
     // app.get("/angelslanding.html", function(req, res) {
     //     res.sendFile(path.join(__dirname, "../public/pages/angelslanding.html"));
     // });
